@@ -230,7 +230,7 @@ func (d *dockerBuilder) targetOutput(target string) (string, error) {
 		}
 	}
 
-	normalizedTarget := strings.ReplaceAll(target, "/", "-")
+	normalizedTarget := strings.Replace(target, "/", "-", -1)
 
 	ext := ""
 	if strings.HasPrefix(target, "windows") {
